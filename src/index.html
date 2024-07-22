@@ -7,41 +7,48 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- NAVIGATION BAR -->
-    <nav class="bg-gray-200 shadow shadow-gray-300 w-100 px-8 md:px-auto">
-        <div class="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
-            <!-- Logo -->
-            <div class="text-indigo-500 md:order-1">
-                <!-- Heroicon - Chip Outline -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                </svg>
+    <div class="min-h-screen flex flex-col">
+        <!-- NAVIGATION BAR -->
+        <nav class="w-full px-8 py-2 md:px-auto">
+            <div class="md:h-16 h-32 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
+                <!-- Logo -->
+                <div class="text-indigo-500 md:order-1">
+                    <!-- Heroicon - Chip Outline -->
+                    <img src="assets/!PUTR_Logo-02.svg" alt="PUTR Logo" class="h-16 w-auto">
+                </div>
+                <div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
+                    <ul class="flex font-semibold justify-between">
+                        <!-- Active Link = text-indigo-500
+                        Inactive Link = hover:text-indigo-500 -->
+                        <li class="md:px-4 md:py-2 text-indigo-500"><a href="#">Projekty</a></li>
+                        <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Sponsorzy</a></li>
+                        <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">O Nas</a></li>
+                        <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="order-2 md:order-3">
+                    <button class="flex gap-2 items-center bg-green-400 hover:bg-green-500 active:bg-green-600 text-black font-bold py-2 px-4 rounded border-2 border-green-500 hover:border-green-600 transition duration-200 ease-in-out">Wesprzyj nas</button>
+                </div>
             </div>
-            <div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
-                <ul class="flex font-semibold justify-between">
-                    <!-- Active Link = text-indigo-500
-                    Inactive Link = hover:text-indigo-500 -->
-                    <li class="md:px-4 md:py-2 text-indigo-500"><a href="#">Dashboard</a></li>
-                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Search</a></li>
-                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Explore</a></li>
-                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">About</a></li>
-                    <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Contact</a></li>
-                </ul>
+        </nav>
+        <!-- END -->
+
+        <!-- HERO -->
+        <section class="h-full flex flex-col w-full justify-between">
+            <div class="max-w-screen-2xl mx-auto flex flex-col gap-6 w-full">
+                <div class="flex flex-col gap-1">
+                    <h1 class="text-4xl font-semibold">Dajemy nowe życie motoryzacji</h1>
+                    <p class="text-md font-light text-neutral-500">W naszym warsztacie, marzenia o odrestaurowanych maszynach stają się rzeczywistością.</p>
+                </div>
+                <div>
+                    <button class="flex gap-2 items-center bg-green-400 hover:bg-green-500 active:bg-green-600 text-black font-bold py-2 px-4 rounded border-2 border-green-500 hover:border-green-600 transition duration-200 ease-in-out">Wesprzyj nas</button>
+                </div>
             </div>
-            <div class="order-2 md:order-3">
-                <button class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
-                    <!-- Heroicons - Login Solid -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    <span>Login</span>
-                </button>
-            </div>
-        </div>
-    </nav>
-    <!-- END -->
+
+            <img src="./assets/img/Frame 52.svg" alt="Car">
+        </section>
+        <!-- END -->
+    </div>
 
     <!-- SPONSORS -->
     <section class="py-12 px-2 md:px-24 lg:px-40 flex flex-col gap-8">
@@ -61,7 +68,7 @@
     <!-- END -->
 
     <!-- PROJECTS -->
-    <section class="min-w-full px-8 md:px-24 lg:px-40 py-20 flex flex-col gap-12">
+    <section class="max-w-screen-2xl mx-auto px-8 md:px-24 lg:px-40 py-20 flex flex-col gap-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-y-6 gap-x-12">
             <h2 class="text-2xl font-semibold">Projekty przywracające dawny blask perłom motoryzacji</h2>
             <p class="text-sm text-neutral-500 text-right">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.</p>
@@ -116,7 +123,7 @@
     <!-- END -->
 
     <!-- ABOUT US -->
-    <section class="min-w-full px-8 md:px-24 lg:px-40 py-24 flex flex-col gap-12">
+    <section class="max-w-screen-2xl mx-auto px-8 md:px-24 lg:px-40 py-24 flex flex-col gap-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 w-full gap-y-6 gap-x-12">
             <h2 class="text-2xl font-semibold">Nasi oddani renowatorzy klasycznych modeli motoryzacji</h2>
             <p class="text-sm text-neutral-500 text-right">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.</p>
