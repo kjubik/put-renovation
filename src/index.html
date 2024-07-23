@@ -7,23 +7,20 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="min-h-screen flex flex-col">
+    <div class="min-h-screen flex flex-col justify-between bg-neutral-800">
         <!-- NAVIGATION BAR -->
         <nav class="w-full px-8 py-2 md:px-auto">
             <div class="md:h-16 h-32 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
                 <!-- Logo -->
-                <div class="text-indigo-500 md:order-1">
-                    <!-- Heroicon - Chip Outline -->
+                <div class="text-green-500 md:order-1">
                     <img src="assets/!PUTR_Logo-02.svg" alt="PUTR Logo" class="h-16 w-auto">
                 </div>
                 <div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
                     <ul class="flex font-semibold justify-between">
-                        <!-- Active Link = text-indigo-500
-                        Inactive Link = hover:text-indigo-500 -->
-                        <li class="md:px-4 md:py-2 text-indigo-500"><a href="#">Projekty</a></li>
-                        <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Sponsorzy</a></li>
-                        <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">O Nas</a></li>
-                        <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Kontakt</a></li>
+                        <li class="md:px-4 md:py-2 text-green-500"><a href="#">Projekty</a></li>
+                        <li class="md:px-4 md:py-2 hover:text-green-400"><a href="#">Sponsorzy</a></li>
+                        <li class="md:px-4 md:py-2 hover:text-green-400"><a href="#">O Nas</a></li>
+                        <li class="md:px-4 md:py-2 hover:text-green-400"><a href="#">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="order-2 md:order-3">
@@ -34,11 +31,11 @@
         <!-- END -->
 
         <!-- HERO -->
-        <section class="h-full flex flex-col w-full justify-between">
-            <div class="max-w-screen-2xl mx-auto flex flex-col gap-6 w-full">
-                <div class="flex flex-col gap-1">
-                    <h1 class="text-4xl font-semibold">Dajemy nowe życie motoryzacji</h1>
-                    <p class="text-md font-light text-neutral-500">W naszym warsztacie, marzenia o odrestaurowanych maszynach stają się rzeczywistością.</p>
+        <section class="h-full flex flex-col w-full justify-between gap-16">
+            <div class="px-2 md:px-24 lg:px-40 max-w-screen-2xl mx-auto flex flex-col gap-6 w-full">
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-4xl font-semibold text-white">Dajemy nowe życie motoryzacji</h1>
+                    <p class="text-md text-neutral-400">W naszym warsztacie, marzenia o odrestaurowanych maszynach stają się rzeczywistością.</p>
                 </div>
                 <div>
                     <button class="flex gap-2 items-center bg-green-400 hover:bg-green-500 active:bg-green-600 text-black font-bold py-2 px-4 rounded border-2 border-green-500 hover:border-green-600 transition duration-200 ease-in-out">Wesprzyj nas</button>
@@ -51,14 +48,14 @@
     </div>
 
     <!-- SPONSORS -->
-    <section class="py-12 px-2 md:px-24 lg:px-40 flex flex-col gap-8">
-        <div class="flex flex-wrap gap-2 justify-center items-center">
-            <img src="./assets/sponsor_logos/Adidas-Logo.wine.svg" alt="Adidas logo"
-            class="h-16 sm:h-24">
-            <img src="./assets/sponsor_logos/Adidas-Logo.wine.svg" alt="Adidas logo"
-            class="h-16 sm:h-24">
-            <img src="./assets/sponsor_logos/Adidas-Logo.wine.svg" alt="Adidas logo"
-            class="h-16 sm:h-24">
+    <section class="max-w-screen-2xl mx-auto py-12 px-2 md:px-24 lg:px-40 flex flex-col gap-8">
+        <div class="flex flex-row gap px-8 justify-between md:px-0 md:gap-20 md:justify-center items-center">
+            <img src="./assets/sponsor_logos/platynowy/novol.png" alt="Sponsor logo"
+            class="h-24 sm:h-64">
+            <img src="./assets/sponsor_logos/platynowy/porscheinterauto.png" alt="Sponsor logo"
+            class="h-24 sm:h-64">
+            <img src="./assets/sponsor_logos/platynowy/vw.png" alt="Sponsor logo"
+            class="h-16 sm:h-40">
         </div>
         <div class="flex justify-center gap-4">
             <button class="flex gap-2 items-center bg-green-400 hover:bg-green-500 active:bg-green-600 text-black font-bold py-2 px-4 rounded border-2 border-green-500 hover:border-green-600 transition duration-200 ease-in-out">Wesprzyj nas</button>
@@ -113,13 +110,15 @@
     <!-- END -->
     
     <!-- SPONSOR CTA -->
-    <section class="py-12 px-8 md:px-24 lg:px-40 bg-green-400 text-center flex flex-col items-center gap-10">
-        <h2 class="text-3xl font-semibold">Pomożecie naszym marzeniom stać się rzeczywistością?</h2>
-        <div class="flex gap-4 flex-col items-center sm:flex-row">
-            <button class="flex gap-2 items-center bg-neutral-900 hover:bg-neutral-700 active:bg-neutral-600 text-white font-bold py-2 px-4 rounded border border-neutral-700 transition duration-200 ease-in-out">Zostań sponsorem</button>
-            <button class="flex gap-2 items-center bg-green-400 hover:bg-green-500 active:bg-green-600 text-black font-bold py-2 px-4 rounded border-2 border-neutral-800 transition duration-200 ease-in-out">Poznaj korzyści</button>
-        </div>
-    </section>
+     <div class="bg-green-400">
+         <section class="max-w-4xl mx-auto py-28 px-8 md:px-24 lg:px-40 text-center flex flex-col items-center gap-24">
+             <h2 class="text-4xl font-semibold">Pomożecie naszym marzeniom stać się rzeczywistością?</h2>
+             <div class="flex gap-4 flex-col items-center sm:flex-row">
+                 <button class="flex gap-2 items-center bg-neutral-900 hover:bg-neutral-700 active:bg-neutral-600 text-white font-bold py-2 px-4 rounded border border-neutral-700 transition duration-200 ease-in-out">Zostań sponsorem</button>
+                 <button class="flex gap-2 items-center bg-green-400 hover:bg-green-500 active:bg-green-600 text-black font-bold py-2 px-4 rounded border-2 border-neutral-800 transition duration-200 ease-in-out">Poznaj korzyści</button>
+             </div>
+         </section>
+     </div>
     <!-- END -->
 
     <!-- ABOUT US -->
@@ -159,55 +158,57 @@
     <!-- END -->
 
     <!-- FOOTER -->
-    <footer class="py-12 px-8 md:px-24 lg:px-40 bg-black rounded-t-lg">
-        <div id="footer-top">
-            <div class="flex flex-row-reverse justify-between items-center mb-2 tracking-tighter">
-                <a href="#">
-                    <img src="assets/icons/north_east_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Arrow pointing top right"
-                        class="bg-purple-800 rounded-sm p-1">
-                </a>
-                <h2 class="text-white text-3xl font-semibold">Chętni nas wesprzec?</h2>
-            </div>
-
-            <p class="text-neutral-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
-        </div>
-
-        <hr class="h-px mt-6 mb-5 bg-neutral-700 border-0">
-
-        <div id="footer-bottom" class="sm:flex sm:flex-row sm:justify-between sm:items-center">
-            <div>
-                <div class="flex items-center gap-2 mb-2">
-                    <img src="assets/!PUTR_Logo-02.svg" alt="PUTR Logo"
-                    class="w-20">
-                    <h2 class="text-white text-2xl font-semibold">PUT Renovation</h2>
+    <footer class=" bg-black rounded-t-lg">
+        <div class="max-w-screen-2xl mx-auto py-12 px-8 md:px-24 lg:px-40">
+            <div id="footer-top">
+                <div class="flex flex-row-reverse justify-between items-center mb-2 tracking-tighter">
+                    <a href="#">
+                        <img src="assets/icons/north_east_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Arrow pointing top right"
+                            class="bg-purple-800 rounded-sm p-1">
+                    </a>
+                    <h2 class="text-white text-3xl font-semibold">Chętni nas wesprzec?</h2>
                 </div>
     
-                <div class="text-neutral-400 text-sm mb-6">
-                    <p>Politechnika Poznańska</p>
-                    <p>plac Marii Skłodowskiej-Curie 5</p>
-                    <p>60-695 Poznań</p>
-                </div>
+                <p class="text-neutral-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
             </div>
-
-            <div class="flex justify-between gap-4 text-neutral-400 text-sm text-right">
-                <ul class="flex flex-col gap-3">
-                    <li class="font-semibold text-neutral-200"><a href="#">Strona główna</a></li>
-                    <li><a href="#">Projekty</a></li>
-                    <li><a href="#">Nasze Koło</a></li>
-                    <li><a href="#">Sponsorzy</a></li>
-                </ul>
-                
-                <ul class="flex flex-col gap-3">
-                    <li class="font-semibold text-neutral-200">Social Media</li>
-                    <li><a href="https://www.instagram.com/renovationput">Instagram</a></li>
-                    <li><a href="https://www.facebook.com/renovationput">Facebook</a></li>
-                    <li><a href="https://pl.linkedin.com/company/renovationput">LinkedIn</a></li>
-                </ul>
-
-                <ul class="flex flex-col gap-3">
-                    <li class="font-semibold text-neutral-200">Polski</li>
-                    <li>English</li>
-                </ul>
+    
+            <hr class="h-px mt-6 mb-5 bg-neutral-700 border-0">
+    
+            <div id="footer-bottom" class="sm:flex sm:flex-row sm:justify-between sm:items-center">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <img src="assets/!PUTR_Logo-02.svg" alt="PUTR Logo"
+                        class="w-20">
+                        <h2 class="text-white text-2xl font-semibold">PUT Renovation</h2>
+                    </div>
+        
+                    <div class="text-neutral-400 text-sm mb-6">
+                        <p>Politechnika Poznańska</p>
+                        <p>plac Marii Skłodowskiej-Curie 5</p>
+                        <p>60-695 Poznań</p>
+                    </div>
+                </div>
+    
+                <div class="flex justify-between gap-4 text-neutral-400 text-sm text-right">
+                    <ul class="flex flex-col gap-3">
+                        <li class="font-semibold text-neutral-200"><a href="#">Strona główna</a></li>
+                        <li><a href="#">Projekty</a></li>
+                        <li><a href="#">Nasze Koło</a></li>
+                        <li><a href="#">Sponsorzy</a></li>
+                    </ul>
+                    
+                    <ul class="flex flex-col gap-3">
+                        <li class="font-semibold text-neutral-200">Social Media</li>
+                        <li><a href="https://www.instagram.com/renovationput">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/renovationput">Facebook</a></li>
+                        <li><a href="https://pl.linkedin.com/company/renovationput">LinkedIn</a></li>
+                    </ul>
+    
+                    <ul class="flex flex-col gap-3">
+                        <li class="font-semibold text-neutral-200">Polski</li>
+                        <li>English</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
