@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* https://systemfontstack.com/ */
+/* :root {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif; 
+} */
