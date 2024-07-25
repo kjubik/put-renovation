@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUT Renovation</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="min-h-screen flex flex-col justify-between">
+        <!-- NAVIGATION BAR -->
+        <nav class="w-full px-8 py-2 md:px-auto">
+            <div class="md:h-16 h-32 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
+                <!-- Logo -->
+                <div class="text-green-500 md:order-1">
+                    <img src="assets/!PUTR_Logo-02.svg" alt="PUTR Logo" class="h-16 w-auto">
+                </div>
+                <div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
+                    <ul class="flex font-semibold justify-between">
+                        <li class="md:px-4 md:py-2 hover:text-green-400"><a href="#" class="block">Projekty</a></li>
+                        <li class="md:px-4 md:py-2 text-green-500"><a href="#">Sponsorzy</a></li>
+                        <li class="md:px-4 md:py-2 hover:text-green-400"><a href="#">O Nas</a></li>
+                        <li class="md:px-4 md:py-2 hover:text-green-400"><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="order-2 md:order-3 flex flex-row items-center gap-2">
+                    <div class="relative inline-block text-left">
+                        <div>
+                            <button type="button" class="rounded inline-flex justify-center gap-x-1.5 bg-white px-3 py-2 w-16 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                                PL
+                                <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute right-0 z-10 mt-0 origin-top-right rounded-b-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" style="display: none;">
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 w-16 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">EN</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        const menuButton = document.getElementById('menu-button');
+                        const menu = document.querySelector('.absolute');
+
+                        menuButton.addEventListener('click', () => {
+                            const expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+                            menuButton.setAttribute('aria-expanded', !expanded);
+                            menu.style.display = expanded ? 'none' : 'block';
+
+                            if (!expanded) {
+                                menuButton.classList.remove('rounded');
+                                menuButton.classList.add('rounded-t');
+                            } else {
+                                menuButton.classList.remove('rounded-t');
+                                menuButton.classList.add('rounded');
+                            }
+                        });
+
+                        const menuItems = document.querySelectorAll('.absolute a');
+                        menuItems.forEach((item) => {
+                            item.addEventListener('click', () => {
+                                menuButton.setAttribute('aria-expanded', false);
+                                menu.style.display = 'none';
+                                menuButton.classList.add('rounded-t');
+                            });
+                        });
+                    </script>
+                    <button class="flex gap-2 items-center bg-green-400 hover:bg-green-500 active:bg-green-600 text-black font-bold py-2 px-4 rounded border-2 border-green-500 hover:border-green-600 transition duration-200 ease-in-out">Wesprzyj nas</button>
+                </div>
+            </div>
+        </nav>
+        <!-- END -->
+
+        
+
+    <!-- FOOTER -->
+    <footer class=" bg-black rounded-t-lg">
+        <div class="max-w-screen-2xl mx-auto py-12 px-8 md:px-24 lg:px-40">
+            <div id="footer-top">
+                <div class="flex flex-row-reverse justify-between items-center mb-2 tracking-tighter">
+                    <a href="#">
+                        <img src="assets/icons/north_east_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Arrow pointing top right"
+                            class="bg-purple-800 rounded-sm p-1">
+                    </a>
+                    <h2 class="text-white text-3xl font-semibold">Chętni nas wesprzec?</h2>
+                </div>
+    
+                <p class="text-neutral-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.</p>
+            </div>
+    
+            <hr class="h-px mt-6 mb-5 bg-neutral-700 border-0">
+    
+            <div id="footer-bottom" class="sm:flex sm:flex-row sm:justify-between sm:items-center">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <img src="assets/!PUTR_Logo-02.svg" alt="PUTR Logo"
+                        class="w-20">
+                        <h2 class="text-white text-2xl font-semibold">PUT Renovation</h2>
+                    </div>
+        
+                    <div class="text-neutral-400 text-sm mb-6">
+                        <p>Politechnika Poznańska</p>
+                        <p>plac Marii Skłodowskiej-Curie 5</p>
+                        <p>60-695 Poznań</p>
+                    </div>
+                </div>
+    
+                <div class="flex justify-between gap-4 text-neutral-400 text-sm text-right">
+                    <ul class="flex flex-col gap-3">
+                        <li class="font-semibold text-neutral-200"><a href="#">Strona główna</a></li>
+                        <li><a href="#">Projekty</a></li>
+                        <li><a href="#">Nasze Koło</a></li>
+                        <li><a href="#">Sponsorzy</a></li>
+                    </ul>
+                    
+                    <ul class="flex flex-col gap-3">
+                        <li class="font-semibold text-neutral-200">Social Media</li>
+                        <li><a href="https://www.instagram.com/renovationput">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/renovationput">Facebook</a></li>
+                        <li><a href="https://pl.linkedin.com/company/renovationput">LinkedIn</a></li>
+                    </ul>
+    
+                    <ul class="flex flex-col gap-3">
+                        <li class="font-semibold text-neutral-200">Polski</li>
+                        <li>English</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END -->
+</body>
+</html>
