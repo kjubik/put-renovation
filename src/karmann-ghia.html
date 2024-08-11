@@ -9,56 +9,69 @@
 <body>
     <div class="min-h-screen flex flex-col">
         <!-- NAVIGATION BAR -->
-        <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-            </a>
-            <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                    <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-            </svg></button>
-                    <!-- Dropdown menu -->
-                    <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                            <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                            </li>
-                            <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                            </li>
-                            <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                            </li>
-                        </ul>
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+        <nav class="bg-neutral-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <!-- Mobile menu button-->
+                  <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-400 hover:bg-neutral-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Icon when menu is closed.
+          
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+                      Icon when menu is open.
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex flex-shrink-0 items-center">
+                    <a href="./index.html">
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                    </a>
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                      <!-- Current: "bg-neutral-900 text-white", Default: "text-neutral-300 hover:bg-neutral-700 hover:text-white" -->
+                      <a href="./karmann-ghia.html" class="rounded-md bg-neutral-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Projekty</a>
+                      <a href="./sponsors.html" class="rounded-md px-3 py-2 text-sm font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">Sponsorzy</a>
+                      <a href="./about-us.html" class="rounded-md px-3 py-2 text-sm font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">O Nas</a>
+                      <a href="./contact.html" class="rounded-md px-3 py-2 text-sm font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">Kontakt</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          
+                  <!-- Profile dropdown -->
+                  <div class="relative ml-3">
+                    <div>
+                      <button type="button" class="" id="user-menu-button" aria-expanded="false" aria-haspopup="false">button</button>
+                    </div>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-                </li>
-                </ul>
+                </div>
             </div>
+          
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-neutral-900 text-white", Default: "text-neutral-300 hover:bg-neutral-700 hover:text-white" -->
+                    <a href="#" class="block rounded-md bg-neutral-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Strona główna</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">Team</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">Projects</a>
+                    <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">Calendar</a>
+                </div>
             </div>
         </nav>
   
@@ -89,20 +102,20 @@
         </div>
     </div>
 
-    <section class="max-w-screen-lg mx-auto flex flex-col gap-12 pt-6 pb-24 md:flex-row-reverse">
+    <section class="max-w-screen-lg mx-auto flex flex-col gap-12 pt-6 px-8 pb-24 md:flex-row-reverse">
         <div class="flex flex-col items-start gap-2">
             <h2 class="text-2xl font-bold">Wyzwanie</h2>
             <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
         </div>
         <div>
-            <img src="assets/img/20231118_084306.jpg" alt="max-w-full h-auto sm:max-h-80">
+            <img src="assets/img/20231118_084306.jpg" alt="" class="max-w-full h-auto rounded shadow-lg">
         </div>
     </section>
 
     <!-- component -->
-<div class="min-h-screen bg-neutral-700 py-6 flex flex-col justify-center sm:py-12" style="background-image: url('./assets/img/405001195_826698795923259_3146230495521521225_n.jpg')">
-    <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-      <div class="relative px-4 py-10 bg-neutral-800 shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-60 border border-neutral-500" style="backdrop-filter: blur(20px);">
+<div class="h-screen bg-neutral-700 py-6 flex flex-col justify-center sm:py-12 bg-no-repeat bg-cover bg-center" style="background-image: url('./assets/img/405001195_826698795923259_3146230495521521225_n.jpg')">
+    <div class="relative py-3 sm:max-w-xl mx-4 sm:mx-auto">
+      <div class="relative px-4 py-10 bg-neutral-800 shadow-2xl sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-60 border border-neutral-500" style="backdrop-filter: blur(20px);">
         <div class="flex flex-col items-start gap-2 ">
             <h2 class="text-2xl font-bold text-white">Rozwiązanie</h2>
             <p class="text-justify text-neutral-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
@@ -112,13 +125,13 @@
     </div>
   </div>
 
-    <section class="max-w-screen-lg mx-auto flex flex-col gap-12 py-24 md:flex-row">
+    <section class="max-w-screen-lg mx-auto flex flex-col gap-12 px-8 py-24 md:flex-row">
         <div class="flex flex-col items-start gap-2">
             <h2 class="text-2xl font-bold">Rezultaty</h2>
             <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
         </div>
         <div>
-            <img src="assets/img/20231118_084306.jpg" alt="max-w-full h-auto sm:max-h-80">
+            <img src="assets/img/20231118_084306.jpg" alt="" class="max-w-full h-auto rounded shadow-lg">
         </div>
     </section>
 
