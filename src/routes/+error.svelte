@@ -1,8 +1,3 @@
-<script lang="ts">
-	import { page } from '$app/stores';
-</script>
-
-<h1>{$page.error?.message}</h1>
 <section class="bg-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center">
