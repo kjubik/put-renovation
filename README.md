@@ -1,38 +1,25 @@
-# create-svelte
+# PUT Renovation
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Website for [`PUT Renovation`](https://renovation.put.poznan.pl/) student club.
 
-## Creating a project
+## Setting up development
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Clone the project repository from GitHub
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+git clone https://github.com/kjubik/put-renovation.git
 ```
 
-## Building
-
-To create a production version of your app:
+Create a new directory `pocketbase` in the project root and run the following commands to download and extract the PocketBase server.
 
 ```bash
-npm run build
+wget https://github.com/pocketbase/pocketbase/releases/download/v0.22.19/pocketbase_0.22.19_linux_amd64.zip
+
+unzip pocketbase_0.22.19_linux_amd64.zip
+
+rm pocketbase_0.22.19_linux_amd64.zip
+
+./pocketbase serve
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Navigate to http://localhost:8090/_ to access the PocketBase admin page. Upon first visit, you will be prompted to create an admin user.
