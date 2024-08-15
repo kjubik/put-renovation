@@ -1,8 +1,9 @@
 <script lang="ts">
-    import { pb } from "$lib/pocketbase";
-    import { onMount } from "svelte";
+    import type { PageData } from './$types';
     import type { RecordModel } from 'pocketbase';
 
+    export let data: PageData;
+    
     interface customer extends RecordModel {
         name: string,
         likesPizza: boolean
@@ -10,21 +11,11 @@
 
     let customers: customer[] = [];
 
-    onMount(async () => {
-        try {
-            const result = await pb.collection('customers').getList();
-            console.log("Succes fetching collection", result);
-            customers = result.items as customer[];
-        } catch (error) {
-            console.error("Error fetching collection", error);
-        }
-    })
-
 </script>
 
 <h1 class="text-4xl font-bold">Our Customers</h1>
-{#if customers.length > 0}
-    {#each customers as customer}
+{#if data.customers.length > 0}
+    {#each data.customers as customer}
         <div class="flex gap-2">
             <h2>{customer.name}</h2>
             <p>{customer.likesPizza ? '🍕' : '🥪'}</p>
