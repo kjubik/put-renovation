@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <footer class="p-4 bg-neutral-950 sm:p-6">
     <div class="mx-auto max-w-screen-xl">
         <div class="py-6 flex flex-col items-center gap-8 md:flex-row md:justify-between md:gap-0">    
