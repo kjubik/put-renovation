@@ -1,2 +1,7 @@
-<h1 class="font-bold text-4xl">Welcome to SvelteKit</h1>
-<p class="text-sm italic">Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	/** @type {import('./$types').PageData} */
+	export let data;
+</script>
+
+<h1 class="font-bold text-4xl">{data.global.title}</h1>
+<p class="text-sm italic">{data.global.description}</p>
