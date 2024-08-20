@@ -20,7 +20,7 @@
         <div class="md:flex md:justify-between">
             <div class="mb-8 md:mb-0">
                 <a href="/" class="flex items-center">
-                    <img src="assets/!PUTR_Logo-02.svg" class="mr-3 h-16" alt="PUTR Logo" />
+                    <img src="http://localhost:8055/assets/71e9d634-89f4-42a4-8062-aa39aaa4468c" class="mr-3 h-16" alt="PUTR Logo" />
                     <span class="self-center text-2xl font-semibold text-white whitespace-nowrap">PUT Renovation</span>
                 </a>
                 <div class="mt-2 text-neutral-500 text-sm">
@@ -62,13 +62,13 @@
                     <h2 class="mb-6 text-xs font-semibold text-neutral-500 uppercase">Social media</h2>
                     <ul class="text-neutral-400">
                         <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Facebook</a>
+                            <a href="#" class="hover:underline ">Facebook</a>
                         </li>
                         <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Instagram</a>
+                            <a href="#" class="hover:underline ">Instagram</a>
                         </li>
                         <li>
-                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">LinkedIn</a>
+                            <a href="#" class="hover:underline">LinkedIn</a>
                         </li>
                     </ul>
                 </div>
