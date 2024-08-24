@@ -6,13 +6,22 @@
 		NavUl,
 		NavHamburger,
 		Dropdown,
-		DropdownItem,
-		DropdownDivider
+		DropdownItem
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	$: activeUrl = $page.url.pathname;
+
+	let projects = [];
+
+	onMount(async () => {
+		// TODO: update url in fetch request below
+		const response = await fetch('http://localhost:8055/items/project_previews?fields=slug,title');
+		const data = await response.json();
+		projects = data.data;
+	});
 </script>
 
 <div class="border-b">
@@ -29,8 +38,9 @@
 				Projekty<ChevronDownOutline class="ms-2 inline h-6 w-6 text-primary-800 dark:text-white" />
 			</NavLi>
 			<Dropdown class="z-20 w-44">
-				<DropdownItem href="/">### Karmann Ghia</DropdownItem>
-				<DropdownItem href="/docs/components/navbar">### Fiat Seicento</DropdownItem>
+				{#each projects as project}
+				<DropdownItem href="/projects/{project.slug}">{project.title}</DropdownItem>
+				{/each}
 			</Dropdown>
 			<NavLi href="/settings">Sposnorzy</NavLi>
 			<NavLi href="/pricing">O Nas</NavLi>
