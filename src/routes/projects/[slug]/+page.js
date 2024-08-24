@@ -12,7 +12,16 @@ export async function load({ fetch, params }) {
         }
     }));
 
+    const stats = await directus.request(readItems('car_stats', {
+        filter: {
+            slug: {
+                _eq: params.slug
+            }
+        }
+    }))
+
     return {
         content: page,
+        stats: stats,
     };
 }
