@@ -1,6 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
-
 	/** @type {import('./$types').PageData} */
 
 	export let data;
@@ -142,8 +140,8 @@
 
 <section id="social-feed" class="pb-12 px-4">
 	<div class="flex flex-col gap-8">
-		{#each data.ig_posts as post}
+		<!-- {#each data.ig_posts as post}
 			{@html post.embed}
-		{/each}
+		{/each} -->
 	</div>
 </section>

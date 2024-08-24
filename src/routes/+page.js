@@ -8,9 +8,9 @@ export async function load({ fetch }) {
 		platinum_sponsors: await directus.request(readItems('platinum_sponsors')),
 		project_previews: await directus.request(readItems('project_previews')),
 		stats: await directus.request(readItems('our_stats')),
-		ig_posts: await directus.request(readItems('ig_posts', {
-			sort: '-date_created',
-			limit: 3
-		})),
+		// ig_posts: await directus.request(readItems('ig_posts', {
+		// 	sort: '-date_created',
+		// 	limit: 3
+		// })),
 	};
 }
